@@ -1,0 +1,23 @@
+.departments{
+    text-align: center;
+    padding: 30px;
+}
+
+.departments h3{
+    font-weight: 300;
+    font-size: 32px;
+    color: #212121;
+    margin-bottom: 1%;
+}
+
+.departments hr{
+    width: 40px;
+    height: 3px;
+    border: none;
+    border-radius: 10px;
+}
+.departments_characters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
