@@ -8,8 +8,12 @@ Usuários podem cadastrar personagens manualmente através de um formulário e v
 ## 🚀 Funcionalidades
 
 - Formulário para cadastrar personagens
+- Formulário para cadastrar novo departamento
 - Seleção de cargo/função por categoria
 - Visualização dos personagens separados por departamentos
+- Favoritar personagens do organograma
+- Deletar personagens do organograma
+- Trocar a cor de fundo dos departamentos
 - Estilização personalizada com cores por função
 - Interface responsiva e organizada
 
