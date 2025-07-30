@@ -24,7 +24,6 @@ Usuários podem cadastrar personagens manualmente através de um formulário e v
 - React JS
 - JavaScript (ES6+)
 - CSS
-- JSX
 - `useState` para manipulação de estado
 - Componentes funcionais
 
