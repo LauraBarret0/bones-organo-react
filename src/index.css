@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.departamentos {
+  text-align: center;
+}
+
+.departamentos__conatainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f99e1b;
+  border-bottom: 4px solid #f99e1b;
+  display: inline-block;
+  padding-bottom: 24px;
+  margin: 32px 0;
+}
+
+h1, h2 {
+  font-family: 'Prata', serif;
+}
+
+.app__icon{
+    transform: rotate(45deg);
+    border: 3px dotted #212121;
+    padding: 1%;
+    border-radius: 50%;
+}

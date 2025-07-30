@@ -1,6 +1,14 @@
 .cards{
     width: 260px;  
     margin: 2%;  
+    position: relative;
+}
+
+.cards__icon{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
 }
 
 .cards__cabecalho{
@@ -32,4 +40,10 @@
 .cards__rodape p{
     font-size: 16px;
     font-weight: 300;
+    padding: 0 5%;
+}
+
+.rodape__favoritar-icon{
+    color: #f99e1b;
+    cursor: pointer;
 }

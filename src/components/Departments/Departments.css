@@ -1,6 +1,13 @@
 .departments{
     text-align: center;
     padding: 30px;
+    position: relative;
+}
+
+.departments__input{
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }
 
 .departments h3{

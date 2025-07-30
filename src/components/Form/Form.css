@@ -1,8 +1,10 @@
 .form{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     margin: 4%;
-
+    gap: 5%;
 }
 
 .form h2{
@@ -12,9 +14,14 @@
 }
 
 .form form{
+    display: flex;
+    flex-direction: column;
     background-color: #f6f6f6;
-    width: 70%;
     padding: 3% 90px;
     border-radius: 30px;
     box-shadow: 7px 7px 15px rgba(0,0,0,0.08);
+    margin: 4% 0;
+    flex: 1;
 }
+
+

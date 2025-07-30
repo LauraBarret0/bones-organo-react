@@ -4,16 +4,19 @@ import Dropdown from '../Dropdown'
 import Inputs from '../Inputs'
 import './Form.css'
 
-const Form = (props) =>{
+
+const Form = ({departamentos, aoPersonagemCadastrado, aoCadastrarDepart}) =>{
 
     const [nome, setNome] = useState('')
     const [descricao, setDescricao] = useState('')
     const [imagem, setImagem] = useState('')
     const [departamento, setDepartamento] = useState('')
+    const [nomeDepart, setnomeDepart] = useState('')
+    const [corDepart, setcorDepart] = useState('')
 
     const aoSalvar = (evento) =>{
         evento.preventDefault()
-        props.aoPersonagemCadastrado({
+        aoPersonagemCadastrado({
             nome,
             descricao,
             imagem,
@@ -28,7 +31,7 @@ const Form = (props) =>{
 
     return(
         <section className='form'>
-            <form onSubmit={aoSalvar}>
+            <form className='form__personagens' onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do personagem.</h2>
                 <Inputs 
                     label='Nome' 
@@ -55,13 +58,47 @@ const Form = (props) =>{
                 <Dropdown 
                     label='Departamento' 
                     obrigatorio={true} 
-                    departamentos={props.departamentos} 
+                    departamentos={departamentos} 
                     valor={departamento}
                     aoAlterado={valor => setDepartamento(valor)}
                 />
                 <Button>Criar card</Button>
             </form>
+            
+
+            
+
+            <form className='form__depart' onSubmit={(evento) => {
+                evento.preventDefault()
+                aoCadastrarDepart({
+                    nome: nomeDepart,
+                    cor: corDepart
+                })
+                setnomeDepart('')
+                setcorDepart('')
+            }}>
+                <h2>Preencha os dados para criar um novo departamento.</h2>
+                <Inputs 
+                    label='Departamento' 
+                    placeholder='Digite o nome do departamento ' 
+                    obrigatorio={true}
+                    valor={nomeDepart}
+                    aoAlterado={valor => setnomeDepart(valor)}
+                />
+                <Inputs 
+                    label='Cor' 
+                    placeholder='Digite a cor do departamento' 
+                    obrigatorio={true}
+                    valor={corDepart}
+                    aoAlterado={valor => setcorDepart(valor)}
+                    type='color'
+                />
+                
+                <Button>Criar departamento</Button>
+            </form>
+            
         </section>
+        
     )
 }
 
